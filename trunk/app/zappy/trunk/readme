@@ -1,0 +1,62 @@
+zappy - zelda actor placement - python
+
+Before using, make sure you have:
+ - Python2.x
+ - VPython (http://vpython.org)
+
+Usage:
+ python zappy.py <ROM> <SCENE> <MAP> [OBJECT SET (optional)]
+ Note: Scene, map, and object set values are assumed to be decimal unless
+       prefixed with a "0x"
+ 
+Example:
+ python zappy.py /home/spinout/ZELOOTMA.z64
+ 
+Controls:
+ F1 - F5: change what you are editing
+  F1: Transition actors
+  F2: Link actors
+  F3: Map actors
+  F4: Objects
+  F5: Waterboxes
+ When editing actors or waterboxes, you control their positions with:
+  i/k: X axis
+  y/h: Y axis
+  j/l: Z axis
+ When editing actors, change their rotations with:
+  r/f: X axis
+  e/t: Y axis
+  d/g: Z axis
+ When editing actor or objects, change their values with:
+  [: decrement
+  ]: increment
+  Don't hold these down, or you could crash zappy
+ When editing actors, change their variables with:
+  <: decrement
+  >: increment
+  Don't hold these down, or you could crash zappy
+ When editing waterboxes, change their size with:
+  [/]: X size
+  </>: Z size
+ Saving:
+  ctrl+s
+ When editing actors and waterboxes, reset their positions with a
+ Camera:
+  Rotation:
+   right click+drag
+  Movement:
+   w: forward
+   s: backwards
+ When editing anything, you can change the instance of what you are editing with:
+  +/=: next (unless you are at the last)
+  -: previous (unless you are at the first)
+  Note:
+   Do not hold these down. If you do, it may crash zappy. SAVE OFTEN!
+ To change the increment amount, press Tab. Don't hold this button down either.
+
+To have it work with other game versions, edit the settings in "zappy_settings".
+You can also change the background color in that file. Comments are allowed,
+everything after a # is a comment.
+
+~spinout 2009-07-30 13:30:17
+  
