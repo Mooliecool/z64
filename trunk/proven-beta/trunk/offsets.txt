@@ -1,0 +1,14 @@
+Try and keep this list updated as you bring your hacks to life :)
+V = Virutal
+P = Physical
+
+Why are we updating the virtual/physical list? So we con *POSSIBLY* recompress the rom to 32 MB and release on a wad file for Wii!
+
+Ptr Off	|V. Start V. End   P. Start P. End   File       	Desc
+00018F30|035CE040 035CF140 035C1800 00000000 Aria.zactor        Aria actor 
+00018F40|035CF140 035EC1B0 035C2900 00000000 Aria.zobj          Aria object
+00B8EF60|035CE040 035CF140 N/A      N/A	     Aria.zactor        Aria actor  (0x00D9)
+00B9E748|035CF140 035EC1B0 N/A      N/A	     Aria.zobj          Aria object (0x0010)
+
+
+

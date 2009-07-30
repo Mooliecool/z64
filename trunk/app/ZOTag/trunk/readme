@@ -1,0 +1,8 @@
+ZOTag: tag together zelda object files
+
+Usage:
+ python zot.py <file to append to> <file to append> <bank>
+Example:
+ python zot.py /home/user/object1.zobj /home/user/object2.zobj 6
+
+~spinout
