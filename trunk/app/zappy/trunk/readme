@@ -10,7 +10,7 @@ Usage:
        prefixed with a "0x"
  
 Example:
- python zappy.py /home/spinout/ZELOOTMA.z64
+ python zappy.py /home/spinout/ZELOOTMA.z64 109 0
  
 Controls:
  F1 - F5: change what you are editing
