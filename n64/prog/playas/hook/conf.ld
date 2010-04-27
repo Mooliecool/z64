@@ -1,0 +1,2 @@
+ENTRY_POINT = 0x80070784;
+ADDRESS_START = hookmain;

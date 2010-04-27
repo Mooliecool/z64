@@ -1,0 +1,8 @@
+802120E0	uint32 screen_top
+802120E4	uint32 screen_bottom
+802120E8	uint32 screen_left
+802120EC	uint32 screen_right
+802120F0	f32 cam_distance
+802124F4	f32 fog_distance
+802124F8	f32 z_distance
+802124FC	f32 unknown	leave at 1.0

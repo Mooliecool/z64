@@ -1,0 +1,40 @@
+z64porter - Port areas from a MM US ROM to a OoT Debug ROM.
+Version 1.3.0
+
+by spinout
+
+Before using
+  Make sure you have python 2.x (2.5 reccomended) installed, and that your MM ROM is decompressed
+  
+FOR REFERENCE
+check:
+ http://wiki.spinout182.com/index.php?title=MM_US_Scene_Listing
+for a Majora's Mask scene listing, and check
+ http://wiki.spinout182.com/index.php?title=Zelda_64_Scene_Listings:_Debug_ROM
+for a Debug ROM scene listing
+
+Usage
+  Command line
+    Format:
+      python z64porter.py [OOT DEBUG ROM] [DECOMPRESSED MM US ROM] [SCENE TO REPLACE] [SCENE TO PORT] <OPTIONS>
+
+    Options: (All are optional)
+      -m MUSIC	  Music value. Prefix with 0x if hex.
+      -o OFFSET	  Offset to insert your port at. Assumeed hex; 0x optional
+      -s	  Operate in safe mode (Don't port actors/objects)
+      -q	  Quiet mode (Don't output messages)
+   
+    Examples:
+      python z64porter.py ZELOOTMA.z64 MM_DEC.z64 109 35
+        This would port scene 35 from MM (Termina feild) to scene 109 of OoT (Chest test area), at the offset
+        it finds, porting actors, and outputting status messages.
+      python z64porter.py ZELOOTMA.z64 MM_DEC.z64 109 12 -s -q -o 0x35D0000
+        This would port scene 9 from MM (Ikana canyon) to scene 109 of OoT (Chest test area), at 0x35D0000,
+        skipping map actors, and not outputting status messages.
+  GUI
+    Run z64porter-gui.py and give it what it asks for. If and when you give it your own offset, do not prefix
+    with a "0x"
+  NOTE
+    You cannot port over all scenes. Try using debug room scenes (scene 109, map select 119 is my favorite)
+
+That's all! Enjoy :)

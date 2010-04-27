@@ -1,0 +1,14 @@
+SetTextRGBA   = 0x800FB3AC;
+SetTextXY     = 0x800FB41C;
+SetTextString = 0x800FBCB4;
+func800985DC  = 0x800985DC;
+func8009899C  = 0x8009899C;
+ActorSpawn    = 0x80031F50;
+ObjectSpawn   = 0x80097C00;
+sqrtf         = 0x801031E0;
+absf          = 0x801067E0;
+cosf          = 0x80104610;
+sinf          = 0x80100290;
+coss          = 0x80104780;
+sins          = 0x80100450;
+changeAnimation = 0x800A52F8;

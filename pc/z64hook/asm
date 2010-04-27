@@ -1,0 +1,51 @@
+.org 80000400		;ROM: 0x1000
+;compiled: 3C0AA4603C090060AD4900003C091360AD4900043C09000034090FFFAD49000C8D4900101409FFFE000000003C0A80003C1D8001254A04980140000827BD2D60
+LUI T2, 0xA460
+LUI T1, 0x0060
+SW T1, 0x0000(T2)
+LUI T1, 0x1360
+SW T1, 0x0004(T2)
+LUI T1, 0x0000		;To change transfer size, change this
+ORI T1, R0, 0x7FFF	;And this (Subtract 1 from total size, ex 0x1000 = 0xFFF) Default transfer size: 0x8000 bytes
+SW T1, 0x000C(T2)
+DMAcheck:
+LW T1, 0x0010(T2)
+BNE T1, R0, DMAcheck
+NOP
+LUI T2, 0x8000
+LUI SP, 0x8001
+ADDIU T2, T2, 0x0498
+JR T2
+ADDIU SP, SP, 0x2D60
+
+.org 80000460		;ROM: 0x1060	this makes it so our routine is not overwritten when oot clears all of the ram when booting.
+;compiled: 3C0E006000000000
+LUI T6, 0x0060
+NOP
+
+.org 80070F6C		;ROM: 0xAE810C
+;compiled: 00000000
+NOP
+
+.org 80070784		;ROM: 0xAE7924. Hook to first routine
+;compiled: 0C180000020020251000011A00000000
+JAL 0x80600000
+OR A0, S0, R0
+B 0x80070BF8
+NOP
+
+.org 8010076C		;ROM: 0xB7790C. Hook to second routine
+;Compiled: 08181000
+J 0x80604000
+
+.org 80600000		;ROM: 0x3600000
+;This is the user created routine, to be used with printing.
+;compiled: 03E0000800000000
+JR RA
+NOP
+
+.org 80604000		;ROM: 0x3604000
+;This is the other user created routine, to be used for anything else. Is executed at almost all times.
+;compiled: 03E0000800000000
+JR RA
+NOP

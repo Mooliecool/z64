@@ -1,0 +1,2 @@
+ENTRY_POINT = 0x80600000;
+ADDRESS_START = spawnstuff;
