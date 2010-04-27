@@ -1,0 +1,9 @@
+Changes pointers to within gameplay_keep as well as animations.
+
+Known about beamblade: Seen in Pre Release screenshots.
+
+Known issues:
+ - Beam does not fly away
+ - Link's animation plays too fast (though it is the correct one)
+
+~spinout 2009-07-30 00:53:18
