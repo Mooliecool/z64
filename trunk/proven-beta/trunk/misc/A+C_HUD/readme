@@ -1,8 +1,0 @@
-A+C interface (visual part) - ROM integration.
-
-Restores (visual part of) A+C interface by modifying values within the machine code.
-
-Known issues:
- - Text that appears on B or A buttons is misplaced
-
-~spinout 2009-08-08 01:48:33
