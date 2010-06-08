@@ -25,9 +25,9 @@ def main():
                 f.seek(i)
                 f.write(pack(">L",w+old_end))   #Write recalculated word
                 c+=1                            #Add to count of recalculations
-            elif (not dl and w == 0xE7000000)
+            elif (not dl and w == 0xE7000000) :
                 dl = True
-            elif (dl and w == 0xDF000000)
+            elif (dl and w == 0xDF000000) :
                 dl = False
         f.close()   #Close the file being appended to
         return c
