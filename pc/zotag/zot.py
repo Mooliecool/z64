@@ -16,6 +16,7 @@ def main():
         new_end=f.tell()    #Get the new end of the file
         b.close()           #Close the file being appended
         f.seek(old_end)
+        dl=False
         for i in range(old_end,new_end,4):
             w=unpack(">L",f.read(4))[0] #Word at offset i
             #Offset possible?  Bank correct? Offset point to within file?
