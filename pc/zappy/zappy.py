@@ -248,7 +248,7 @@ def main():
         elif COMMAND[0]==0xE7 and COMMAND[1:4]==(0,0,0):
             DISPLAYLIST = 1
         MAP_POS+=8
-        
+    scene.range = 3
     scene.autoscale=0   #fixes problems with newer versions of vpython
     try:
         OLD_CAM_VALS = (scene.center , scene.forward , scene.range )
